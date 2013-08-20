@@ -83,6 +83,7 @@ Ubuntu
 * build-essential
 * python-setuptools
 * python-dev
+* libssh-dev
 
 CentOS5
 ^^^^^^^

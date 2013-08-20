@@ -28,7 +28,7 @@ every Enstratius account by default. You can customize these roles or create you
 +==============+========+===========+
 | CONSOLE      | Access | ANY       |
 +--------------+--------+-----------+
-| CLUSTER      | ANY    | ANY       |
+| DEPLOYMENT   | ANY    | ANY       |
 +--------------+--------+-----------+
 | DISTRIBUTION | ANY    | ANY       |
 +--------------+--------+-----------+
@@ -58,7 +58,7 @@ every Enstratius account by default. You can customize these roles or create you
 +==============+===========+===========+
 | CONSOLE      | Access    | ANY       |
 +--------------+-----------+-----------+
-| CLUSTER      | Configure | ANY       |
+| DEPLOYMENT   | Configure | ANY       |
 +--------------+-----------+-----------+
 | DISTRIBUTION | Configure | ANY       |
 +--------------+-----------+-----------+
