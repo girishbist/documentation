@@ -55,24 +55,24 @@ List of Clouds
 
 .. raw:: html
 	
-	<a href="./images/post_install_aws.png">Amazon Web Services</a><br />
-	<a href="./images/post_install_att.png">AT&T Synaptic Cloud</a><br />
-	<a href="./images/post_install_azure.png">Azure</a><br />
-	<a href="./images/post_install_bluelock.png">Bluelock vCloud Director</a><br />
-	<a href="./images/post_install_cloudcentral.png">CloudCentral</a><br />
-	<a href="./images/post_install_cloudsigma_lv.png">CloudSigma Las Vegas</a><br />
-	<a href="./images/post_install_cloudsigma_z.png">CloudSigma Zurich</a><br />
-	<a href="./images/post_install_gogrid.png">GoGrid</a><br />
-	<a href="./images/post_install_google.png">Google</a><br />
-	<a href="./images/post_install_hp.png">HP Cloud</a><br />
-	<a href="./images/post_install_ibm.png">IBM SmartCloud Enterprise</a><br />
-	<a href="./images/post_install_joyent.png">Joyent</a><br />
-	<a href="./images/post_install_kt.png">KT ucloud</a><br />
-	<a href="./images/post_install_opsource.png">OpSource</a><br />
-	<a href="./images/post_install_rackspace.png">Rackspace NG</a><br />
-	<a href="./images/post_install_serverexpress.png">ServerExpress</a><br />
-	<a href="./images/post_install_tata.png">Tata InstaCompute</a><br />
-	<a href="./images/post_install_terremark.png">Terremark Enterprise Cloud</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_aws.png">Amazon Web Services</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_att.png">AT&T Synaptic Cloud</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_azure.png">Azure</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_bluelock.png">Bluelock vCloud Director</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_cloudcentral.png">CloudCentral</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_cloudsigma_lv.png">CloudSigma Las Vegas</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_cloudsigma_z.png">CloudSigma Zurich</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_gogrid.png">GoGrid</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_google.png">Google</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_hp.png">HP Cloud</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_ibm.png">IBM SmartCloud Enterprise</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_joyent.png">Joyent</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_kt.png">KT ucloud</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_opsource.png">OpSource</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_rackspace.png">Rackspace NG</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_serverexpress.png">ServerExpress</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_tata.png">Tata InstaCompute</a><br />
+	<a target="_blank" href="http://docs.enstratius.com/on-premise/installation/single_node/images/post_install_terremark.png">Terremark Enterprise Cloud</a><br />
 
     
 MySQL
