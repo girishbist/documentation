@@ -22,6 +22,12 @@ Agent
 
    Enstratius Agent Logging
 
+Agent Logs
+~~~~~~~~~~
+
+* **Windows:**  C:\\enstratus\\ws\\tomcat\\logs
+* **Linux:** /enstratus/ws/tomcat/logs
+
 .. toctree::
    :maxdepth: 2
    :hidden:
