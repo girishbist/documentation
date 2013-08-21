@@ -1,15 +1,15 @@
 .. _site_root:
 
-.. Enstratius documentation master file, created by
+.. Dell Multi-Cloud Manager documentation master file, created by
    sphinx-quickstart on Mon Mar 12 21:46:44 2012.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
 
-Enstratius Documentation
+Dell Multi-Cloud Manager Documentation
 ========================
 
-Welcome to the Enstratius documentation portal. 
+Welcome to the Dell Multi-Cloud Manager documentation portal. 
 
 Documentation is divided into six sections, also linked above. 
 
@@ -26,11 +26,11 @@ the dasein-cloud model exposes cloud functionality, see the links below for your
 provider:
 
 .. note:: This list is *not* an exhaustive list of the cloud features supported by
-   Enstratius. Rather, it is information pulled from the wiki sites in github for each of
+   Dell Multi-Cloud Manager. Rather, it is information pulled from the wiki sites in github for each of
    these dasein implementations.
 
 .. warning:: Although capabilities may exist at the dasein-cloud abstraction layer, a
-   given feature may not necessarily have been fully represented in either the Enstratius
+   given feature may not necessarily have been fully represented in either the Dell Multi-Cloud Manager
    console or API.
 
 .. hlist::

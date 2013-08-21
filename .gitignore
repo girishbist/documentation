@@ -1,5 +1,4 @@
 *.swp
-*.idea
 *.idea/*
 _build/
 *.html
