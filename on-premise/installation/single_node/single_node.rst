@@ -14,6 +14,9 @@ This is the Enstratius on-premise install built using Opscode chef-solo
    This installer **CAN** be used to install multi-node production installs but it
    requires more manual configuration.
 
+
+.. _install_quick_start:
+
 Quick Start
 ~~~~~~~~~~~
 
@@ -129,6 +132,8 @@ The contents of the directory will be similar to:
    * roles
    * setup.sh
    * solo.rb
+
+.. _running_setup:
 
 Running the setup
 ~~~~~~~~~~~~~~~~~

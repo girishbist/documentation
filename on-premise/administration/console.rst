@@ -78,9 +78,9 @@ Outgoing Connections
    The console service interacts with the dispatcher service via a webservices call
    configured in the file:
 
-  /services/console/jetty/webapps/ROOT/WEB-INF/classes/enstratus-webservices.cfg
+   ``/services/console/jetty/webapps/ROOT/WEB-INF/classes/enstratus-webservices.cfg``
 
-  This communication is encrypted using industry standard AES-256 encryption.
+   This communication is encrypted using industry standard AES-256 encryption.
 
 #. Riak and MySQL
 
@@ -247,35 +247,28 @@ An example of how to run a backup of databases is shown in this script:
 Configuration Files
 -------------------
 
-The Enstratius console service has 8 configuration files /services/console:
+The Enstratius console service has configuration files /services/console:
 
-.. hlist::
-   :columns: 3
+#. /resources/log4j.xml
+#. /resources/directory.properties
+#. /bin/dirsync
+#. /contexts/enstratus-context.xml
+#. /resources/dasein-persistence.properties
+#. /resources/enstratus-console.cfg
+#. /resources/enstratus-webservices.cfg
+#. /resources/custom/networks.cfg
 
-   * /resources/log4j.properties
-   * /resources/directory.properties
-   * /bin/dirsync
-   * /contexts/enstratus-context.xml
-   * /resources/dasein-persistence.properties
-   * /resources/enstratus-console.cfg
-   * /resources/enstratus-webservices.cfg
-   * /resources/custom/networks.cfg
+log4j.xml
+~~~~~~~~~
 
-log4j.properties
-~~~~~~~~~~~~~~~~
-
-Path:
-
-  ``/services/console/resources/log4j.properties``
+``/services/console/resources/log4j.xml``
 
 This file is responsible for controlling the logging behavior for the console service.
 
 directory.properties
 ~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/console/resources/directory.properties``
+``/services/console/resources/directory.properties``
 
 This file is responsible for defining the database and message queue connections for the
 console service.
@@ -283,9 +276,7 @@ console service.
 dirsync
 ~~~~~~~
 
-Path:
-
-  ``/services/console/bin/dirsync``
+``/services/console/bin/dirsync``
 
 This file is a script used to initiate a synchronization event with the LDAP/AD service,
 if it exists.
@@ -293,9 +284,7 @@ if it exists.
 enstratus-context.xml
 ~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/console/contexts/enstratus-context.xml``
+``/services/console/contexts/enstratus-context.xml``
 
 This file controls how the API service connects to its associated databases:
 console and enstratus_console.
@@ -303,9 +292,7 @@ console and enstratus_console.
 dasein-persistence.properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/console/resources/dasein-persistence.properties``
+``/services/console/resources/dasein-persistence.properties``
 
 This file defines the connection to the dasein persistence layer of Enstratius. It also
 specifies the connection point to the Riak database service.
@@ -313,18 +300,14 @@ specifies the connection point to the Riak database service.
 enstratus-console.cfg
 ~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/console/resources/enstratus-console.cfg``
+``/services/console/resources/enstratus-console.cfg``
 
 This file is used to define the url to which the console will respond.
 
 enstratus-webservices.cfg
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-   ``/services/console/resources/enstratus-webservices.cfg``
+``/services/console/resources/enstratus-webservices.cfg``
 
 This file defines the webservices endpoints for the API service to connect to the
 Enstratius dispatcher service.
@@ -332,9 +315,7 @@ Enstratius dispatcher service.
 networks.cfg
 ~~~~~~~~~~~~
 
-Path:
-
-  ``/services/console/resources/custom/networks``
+``/services/console/resources/custom/networks``
 
 This file is a general control point for several items, the most important of which is the
 encryption key for encrypting connections to the dispatcher web services.
