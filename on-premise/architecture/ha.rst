@@ -2,12 +2,8 @@
 
 High Availability
 -----------------
-
-.. figure:: ./images/ha_enstratus.png
-   :height: 588 px
-   :width: 931 px
+.. figure:: ../images/multinodes.png
    :scale: 85 %
-   :alt: Enstratius High-Availability Architecture
    :align: center
-
-   Enstratius High-Availability Architecture
+   
+   Supported DMCM HA architectures

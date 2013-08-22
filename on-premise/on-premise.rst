@@ -7,26 +7,22 @@
 On-Premise
 ==========
 
-On-Premise installations of Enstratius make sense for many reasons, and, due to the
-flexibility of the Enstratius architecture, you can deploy Enstratius as a single-node
-personal development environment, two-node POC, or a fully scaled high-availability cloud
+On-Premise installations of DMCM make sense for many reasons, and, due to the
+flexibility of the DMCM architecture, you can deploy Enstratius as a single-node
+personal development environment, single node POC, or a fully scaled high-availability cloud
 management solution.
-
-For supported OS/Distributions, please visit the :ref:`Reference Architecture
-<reference_architecture>` page for some examples and recommendations.
-
 
 Developers
 ----------
 
-.. figure:: ./images/developers.png
+.. image:: ./images/developers.png
    :height: 232 px
    :width: 922 px
    :scale: 85 %
    :alt: Developers
    :align: center
 
-Setting up a development Enstratius environment or a single-node Enstratius environment for
+Setting up a development DMCM environment or a single-node DMCM environment for
 sales/demonstration purposes just got a whole lot simpler. By leveraging vagrant, you can
 install the full Enstratius cloud management software stack in less than 15 minutes,
 depending on your network speed.
@@ -35,30 +31,35 @@ depending on your network speed.
 POC
 ---
 
-.. figure:: ./images/poc.png
+.. image:: ./images/poc.png
    :height: 190 px
    :width: 869 px
    :scale: 85 %
    :alt: Customers
    :align: center
 
-Installing Enstratius cloud management software as part of a POC can be done by leveraging
+Installing DMCM cloud management software as part of a POC can be done by leveraging
 a configuration management engine like Chef from Opscode.
 
-We'll show you how to install Enstratius in a 1 or 2-node architecture.
+POC installations are always performed on a single node.
 
 Production
 ----------
 
-.. figure:: ./images/ha_enstratus.png
-   :height: 588 px
-   :width: 931 px
-   :scale: 85 %
-   :alt: High-Availability Enstratius Architecture
+DMCM can also be deployed in a High-Availability production architecture to support
+hundreds of users and cloud accounts. There are two supported architectures for production installations:
+
+- 9 nodes
+- 23 node HA
+
+.. image:: ./images/multinodes.png
+   :scale: 50%
+   :alt: 9 and 23 node configuration
    :align: center
 
-Enstratius can also be deployed in a High-Availability production architecture to support
-hundreds of users and cloud accounts. 
+Additional Information
+----------------------
+Please see the "Supported Configurations" guide for more details on these configurations.
 
 .. toctree::
    :maxdepth: 3
@@ -66,6 +67,7 @@ hundreds of users and cloud accounts.
    :glob:
 
    architecture/architecture
+   supported_configuration
    requirements/requirements
    installation/installation
    administration/administration

@@ -65,5 +65,4 @@ For windows and MSIE users, here is a document discussing :ref:`MSIE compatibili
    centos/centos
    vagrant/vagrant
    single_node/single_node
-   two_node/two_node
    single_node/post_install

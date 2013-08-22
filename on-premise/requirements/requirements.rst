@@ -6,13 +6,15 @@ Requirements
 The following sections outline the requirements for installing Enstratius cloud management
 software.
 
-.. include:: software.rst
+- :ref:`Operating System <supported_configuration_os>`
+- :ref:`Number of Systems <supported_configuration_production>`
+- :ref:`Network <enstratus_communications>`
 
 .. toctree::
    :maxdepth: 1
    :hidden:
    :titlesonly:
 
-   resources
+   supported_configuration
    network
 
