@@ -276,6 +276,10 @@ Additionally if the user is running DMCM in a public cloud, system sizing requir
 
 Running DMCM in public clouds for production configurations will require additional review and may have additional requirements and recommendations.
 
+.. danger:: Live Motion/Migration
+
+   If you run DMCM virtualized, be aware that LiveMotion/migration is not supported on ANY DMCM instance or database instance. The services must be stopped and the instance taken fully offline before instances are transfered between hypervisors.
+
 Multi Data Center Redundancy
 ----------------------------
 There is no supported configuration for multi datacenter installations of DMCM. Only dedicated DMCM installations are supported in each datacetner. Additionally no two DMCM installations can point to the same cloud account. This means that two full DMCM installations in different datacenters cannot talk to a cloud endpoint with the same set of credentials but they can talk to the same cloud endpoint with two different sets of credentials **provided** they see different sets of resources.
