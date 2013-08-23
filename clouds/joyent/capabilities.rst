@@ -1,3 +1,5 @@
+:orphan:
+
 Capabilities
 ------------
 
@@ -6,4 +8,3 @@ Dasein Cloud concepts:
 
 -  Machines -> VirtualMachine
 -  Datasets -> MachineImage
-

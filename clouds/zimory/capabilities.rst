@@ -1,3 +1,5 @@
+:orphan:
+
 Capabilities
 ------------
 
@@ -15,3 +17,5 @@ ID as the region.
 
 The Dasein Cloud region maps to a location/provider pair. The ID is the
 combination of the location ID and the provider ID.
+
+:orphan:

@@ -4,3 +4,4 @@ _build/
 *.html
 !layout.html
 *DS_Store
+*.docx

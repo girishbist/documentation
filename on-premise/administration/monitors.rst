@@ -139,6 +139,8 @@ Logging for the monitors is done to:
 
 ``/etc/service/enstratus-monitor/log/main/current``
 
+.. _monitor_backups:
+
 Backups
 -------
 

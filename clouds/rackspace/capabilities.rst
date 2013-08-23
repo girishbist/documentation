@@ -1,3 +1,5 @@
+:orphan:
+
 Capabilities
 ------------
 
@@ -9,4 +11,3 @@ access to all the features of their OpenStack cloud.
 -  Server Images -> MachineImage
 -  Cloud Load Balancers -> LoadBalancer
 -  Cloud Files -> BlobStore
-
