@@ -39,7 +39,7 @@ It is our belief that CentOS is an acceptable analog for customers that are more
 Installation Types
 ~~~~~~~~~~~~~~~~~~
 
-Below are the support installation types
+Below are the supported installation types
 
 POC
 ^^^
