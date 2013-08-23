@@ -11,10 +11,10 @@ software.
 - :ref:`Network <enstratus_communications>`
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 1 
    :hidden:
    :titlesonly:
 
-   supported_configuration
+   ../supported_configuration/supported_configuration
    network
 

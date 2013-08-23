@@ -7,7 +7,8 @@
 /* -- page layout ----------------------------------------------------------- */
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: sans-serif;
     font-size: 14px;
     line-height: 150%;
     text-align: center;
@@ -306,12 +307,16 @@ div.topic {
 table {
     border-collapse: collapse;
     margin: 0 -0.5em 0 -0.5em;
-    width: 70%;
+    width: 100%;
+}
+
+table tr.row-odd {
+    background-color: #f9f9f9;
 }
 
 table td, table th {
     padding: 0.2em 0.5em 0.2em 0.5em;
-    font-family: "Courier";
+    font-family: "Open Sans", sans-serif;
 }
 
 div.admonition {

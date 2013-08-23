@@ -59,7 +59,7 @@ hundreds of users and cloud accounts. There are two supported architectures for 
 
 Additional Information
 ----------------------
-Please see the "Supported Configurations" guide for more details on these configurations.
+Please see the :ref:`"Supported Configurations" guide <supported_configuration>` for more details on these configurations.
 
 .. toctree::
    :maxdepth: 3
@@ -67,7 +67,6 @@ Please see the "Supported Configurations" guide for more details on these config
    :glob:
 
    architecture/architecture
-   supported_configuration
    requirements/requirements
    installation/installation
    administration/administration

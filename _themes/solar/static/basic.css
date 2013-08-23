@@ -315,11 +315,20 @@ div.body p.centered {
 /* -- tables ---------------------------------------------------------------- */
 
 table.docutils {
+    font-family: "Open Sans", sans-serif;
     border: 0;
     border-collapse: collapse;
 }
 
-table.docutils td, table.docutils th {
+table.docutils th {
+    padding: 1px 8px 1px 5px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #aaa;
+}
+
+table.docutils td {
     padding: 1px 8px 1px 5px;
     border-top: 0;
     border-left: 0;

@@ -220,7 +220,7 @@ Customer VPN
 
 If providing the engineer with VPN access for the installation, we will provide you with a list of users who need VPN access. VPN access should meet the following criteria:
 
-- Access to external resources (e.g. websites, skype) must **not** be restricted as this is how our team engages in ternal support systems.
+- Access to external resources (e.g. websites, skype) must **not** be restricted as this is how our team engages internal support systems.
 - Access to internal resources (e.g. the systems being used for installation) can be restricted to the systems used for installation provided the SSH and HTTPS requirements are met.
 
 .. note::
@@ -247,6 +247,8 @@ Internet access after installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Internet access for the sysems can be revoked after installation as long as DMCM has no need to communicate with the Internet for cloud access (i.e. access to AWS cloud endpoints)
+
+.. _supported_configuration_lb:
 
 Load Balancing
 --------------

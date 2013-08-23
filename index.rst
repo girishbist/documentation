@@ -7,7 +7,7 @@
 
 
 Dell Multi-Cloud Manager Documentation
-========================
+======================================
 
 Welcome to the Dell Multi-Cloud Manager documentation portal. 
 
