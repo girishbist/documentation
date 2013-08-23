@@ -37,31 +37,31 @@ Customers should be aware of the following when choosing to use RHEL over CentOS
 It is our belief that CentOS is an acceptable analog for customers that are more familiar with the RedHat ecosystem than the Debian/Ubuntu ecosystem.
 
 Installation Types
-------------------
+~~~~~~~~~~~~~~~~~~
 
 Below are the support installation types
 
 POC
-~~~
+^^^
 
 POC installations are intended for demos, proof-of-concept or development/lab environments.
 
 System Requirements
-^^^^^^^^^^^^^^^^^^^
+%%%%%%%%%%%%%%%%%%%
 
 - 4 CPU (8 CPU recommended)
 - 8GB Memory (16GB recommended)
 - 100GB local disk
 - Can be virtualized
 
-In this configuration, all DMCM components and datastores run on a single system. There is no redundancy or high-availability for any components in this configuration. Installations under this configuration are not eligible for support outside of a POC engagement. There is no guarantee of data redundancy.
+In this configuration, all DMCM components and data stores run on a single system. There is no redundancy or high-availability for any components in this configuration. Installations under this configuration are not eligible for support outside of a POC engagement. There is no guarantee of data redundancy.
 
 This configuration will support minor workloads with multiple cloud accounts and can be virtualized.
 
 .. _supported_configuration_production:
 
 Production
-~~~~~~~~~~
+^^^^^^^^^^
 
 There are two configuration considered production quality - :ref:`an installation using 9 nodes <supported_configuration_nine_nodes>` and :ref:`a fully redundant installation using 23 nodes <supported_configuration_23_nodes>`
 
@@ -72,7 +72,7 @@ There are two configuration considered production quality - :ref:`an installatio
 The 9 node production installation is the smallest production-quality installation available.
 
 System Requirements
-===================
+%%%%%%%%%%%%%%%%%%%
 
 - 5 Riak nodes
     - 4 CPU
@@ -109,7 +109,7 @@ Splitting services across nodes in this configuration is **NOT** supported.
 The 23 node production installation brings full redundancy to all components (excluding load balancing and scheduling components depending on environment). This is the minimum number of nodes for this configuration but it can grow by scaling specific components horizontally. This configuration very closely matches the configuration we have in the hosted version of DMCM.
 
 System Requirements
-===================
+%%%%%%%%%%%%%%%%%%%
 
 - 5 Riak nodes
     - 4 CPU
@@ -200,27 +200,27 @@ The following subsystem supports only one running instance and requires external
 - Publisher Queue
 
 Root Access
------------
+~~~~~~~~~~~
 
 Root access is required during the installation for the customer service engineer performing the installation. The installation is done as root. Once the installation is complete root access can be revoked for the engineer.
 
 When engaging support from a customer service engineer, root access will be required for troubleshooting.
 
-It is not neccessary to provide the customer service engineer with the root password. If sudo is in use on the system (and sudo is one of the required packages), the engineer will need to be able to run ``sudo su -l`` and gain a full root shell.
+It is not necessary to provide the customer service engineer with the root password. If sudo is in use on the system (and sudo is one of the required packages), the engineer will need to be able to run ``sudo su -l`` and gain a full root shell.
 
 Remote Installations
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 Installation can be done remotely however installation over remote desktop solutions (e.g. RDP, VNC, GoToMeeting, WebEx, Citrix) is not supported. The engineer will need direct SSH access to the systems as well as HTTPS access to the console post-installation.
 
 SSH and HTTPS access can be provided over the internet, restricted from a dedicated VPN source address or over a customer VPN.
 
 Customer VPN
-------------
+~~~~~~~~~~~~
 
 If providing the engineer with VPN access for the installation, we will provide you with a list of users who need VPN access. VPN access should meet the following criteria:
 
-- Access to external resources (e.g. websites, skype) must **not** be restricted as this is how our team engages internal support systems.
+- Access to external resources (e.g. websites, Skype) must **not** be restricted as this is how our team engages internal support systems.
 - Access to internal resources (e.g. the systems being used for installation) can be restricted to the systems used for installation provided the SSH and HTTPS requirements are met.
 
 .. note::
@@ -229,12 +229,12 @@ If providing the engineer with VPN access for the installation, we will provide 
 .. _supported_configuration_network:
 
 Network Access
---------------
+~~~~~~~~~~~~~~
 
 All DMCM components must have unrestricted access to communicate between them. Additionally, access between DMCM and managed instances is required if the agent or automation is being used.
 
 Internet access during installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 DMCM requires full unrestricted access to the internet during installation. This is for several reasons:
 
@@ -244,26 +244,29 @@ DMCM requires full unrestricted access to the internet during installation. This
 This access can be done through a proxy but it is recommended that the proxy access for these systems not require a username or password.
 
 Internet access after installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Internet access for the sysems can be revoked after installation as long as DMCM has no need to communicate with the Internet for cloud access (i.e. access to AWS cloud endpoints)
 
 .. _supported_configuration_lb:
 
 Load Balancing
---------------
+~~~~~~~~~~~~~~
+
 Customer-provided load balancers are ONLY supported for front-end services (console, api and dispatcher). As we do not have access to all loadbalancers, we will need to work closely with the team responsible for the load balancer on the customer side. We will provide general guidelines as to the configuration but it will be up to the responsible person on the customer side to translate that to the appropriate load balancer configuration.
 
 Load balancing for KM and Riak will be provisioned by the DMCM customer service engineer. Ensuring that these load balancers are redundant depends entirely on the customer environment. The customer service engineer can provision multiple instances of load balancers but only one should service traffic at a time. These must be reachable by the same DNS name used in the registration process regardless of which load balancer is active.
 
-Hearbeating
------------
-Hearbeating software (such as Linux-HA) in conjunction with a floating IP address can be utilized for singleton systems on in the the event that there is a reliable STONITH method and heartbeat path.
+Heartbeating
+~~~~~~~~~~~
+
+Heartbeating software (such as Linux-HA) in conjunction with a floating IP address can be utilized for singleton systems on in the the event that there is a reliable STONITH method and heartbeat path.
 
 .. _supported_configuration_virtualization:
 
 Virtualization
---------------
+~~~~~~~~~~~~~~
+
 Note that in the 9 and 23 node configurations HA only extends as far as the hypervisor. The assumption is that no HA components will be running on the same underlying hypervisor. For instance, if both console nodes are on the same hypervisor there are no guarantees that console services will be available should that hypervisor fail.
 
 DMCM uses the network very heavily and as such there are points of diminishing returns based on the network capacity between hypervisor nodes. It is up to the end user to ensure that there are not only redundant network paths between hypervisors but also enough capacity for DMCM traffic between components.
@@ -281,13 +284,11 @@ Running DMCM in public clouds for production configurations will require additio
    If you run DMCM virtualized, be aware that LiveMotion/migration is not supported on ANY DMCM instance or database instance. The services must be stopped and the instance taken fully offline before instances are transfered between hypervisors.
 
 Multi Data Center Redundancy
-----------------------------
-There is no supported configuration for multi datacenter installations of DMCM. Only dedicated DMCM installations are supported in each datacetner. Additionally no two DMCM installations can point to the same cloud account. This means that two full DMCM installations in different datacenters cannot talk to a cloud endpoint with the same set of credentials but they can talk to the same cloud endpoint with two different sets of credentials **provided** they see different sets of resources.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There is no supported configuration for multi data center installations of DMCM. Only dedicated DMCM installations are supported in each data center. Additionally no two DMCM installations can point to the same cloud account. This means that two full DMCM installations in different data centers cannot talk to a cloud endpoint with the same set of credentials but they can talk to the same cloud endpoint with two different sets of credentials **provided** they see different sets of resources.
 
 Support Contracts
------------------
-Only the 9 and 23+ node configurations are allowed for any DMCM support contract.
+~~~~~~~~~~~~~~~~~
 
-.. toctree::
-   :maxdepth: 2
-   :hidden:
+Only the 9 and 23+ node configurations are allowed for any DMCM support contract.
