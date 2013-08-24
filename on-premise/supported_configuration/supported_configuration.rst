@@ -258,7 +258,7 @@ Customer-provided load balancers are ONLY supported for front-end services (cons
 Load balancing for KM and Riak will be provisioned by the DMCM customer service engineer. Ensuring that these load balancers are redundant depends entirely on the customer environment. The customer service engineer can provision multiple instances of load balancers but only one should service traffic at a time. These must be reachable by the same DNS name used in the registration process regardless of which load balancer is active.
 
 Heartbeating
-~~~~~~~~~~~
+~~~~~~~~~~~~
 
 Heartbeating software (such as Linux-HA) in conjunction with a floating IP address can be utilized for singleton systems on in the the event that there is a reliable STONITH method and heartbeat path.
 
