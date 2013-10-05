@@ -50,6 +50,16 @@ database tier.
 
    Services Added
 
+Click 'Edit' on MySQL service and set the service's scaling model to 'None'.
+
+.. figure:: ./images/addService3.png
+   :height: 600px
+   :scale: 70 %
+   :alt: Set Scaling Model
+   :align: center
+
+   Set Scaling Model
+
 Next, it's time to configure the services. Configuring services means telling Enstratius
 what the relationship is, if any, between the services and what information should be
 passed to dynamically configure the service at run time.
