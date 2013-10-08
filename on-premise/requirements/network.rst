@@ -17,16 +17,16 @@ Agent
 ~~~~~
 
 The DMCM agent listens on port 2003 and can be installed on guest virtual machines.
-The server(s) upon which the worker, monitor, and dispatcher services run must be able to communicate to the agent on this port.
+The server(s) upon which the subscriber, monitor, and dispatcher services run must be able to communicate to the agent on this port.
 
 To summarize:
 
 * Communication from guest virtual machines to the dispatcher server on port 3302
 
-* Communication from the workers, monitors, and the dispatcher service to the guest virtual machines on port 2003
+* Communication from the subscribers, monitors, and the dispatcher service to the guest virtual machines on port 2003
 
 .. note::
-   If the Agent Proxy is being used then only traffic to and from the agent proxy needs to be allowed in place of "guest virtual machines". In AP environments the worker/dispatcher/monitor communication to the DMCM agent happens **through** the agent proxy. Inbound communications from guest virtual machines to the dispatcher also then happen through the agent proxy.
+   If the Agent Proxy is being used then only traffic to and from the agent proxy needs to be allowed in place of "guest virtual machines". In AP environments the subscriber/dispatcher/monitor communication to the DMCM agent happens **through** the agent proxy. Inbound communications from guest virtual machines to the dispatcher also then happen through the agent proxy.
 
 DMCM Communications
 ~~~~~~~~~~~~~~~~~~~~~~~~~

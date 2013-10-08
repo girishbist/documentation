@@ -165,7 +165,7 @@ System Requirements
     - 50GB Local disk
     - Virtualization okay
 
-- 2 Worker nodes
+- 2 Subscriber nodes
     - 8GB Memory
     - 4 CPU
     - 50GB Local disk
@@ -185,7 +185,7 @@ System Requirements
 
 In this configuration all horizontally scalable components have been provided at least one additional instance. The following components are horizontally scalable and support either load balancing or running multiple instances.
 
-- Workers
+- Subscribers
 - Monitors
 - KM (with load balancer)
 - Console (with load balancer)
