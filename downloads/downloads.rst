@@ -9,11 +9,13 @@ API Documentation
 ~~~~~~~~~~~~~~~~~
 
 .. csv-table:: 
-   :header: "Release Date", "SHA256"
+   :header: "Release Date", "MD5"
    :widths: 10, 30
 
-   `2012-06-15 <http://es-content.s3.amazonaws.com/Enstratius_API_2012-06-15.pdf>`_,5103943684aae8955bc97aae14dce6a9224de8b18958c5266ba58d35fe2b713f
-   `2012-04-12 <http://es-content.s3.amazonaws.com/Enstratius_API_2012-04-12.pdf>`_,963045055b89a7eecb9dbcb2109bd9b6ea3c1b6a3f933f92e6e9e1a5bfce0524
+   `2012-06-15 <http://es-content.s3.amazonaws.com/Enstratius_API_2012-06-15.pdf>`_,d4f79483c301e6f71e79d4b29bfa1986
+   `2012-04-12 <http://es-content.s3.amazonaws.com/Enstratius_API_2012-04-12.pdf>`_,7cb1292e912b3e427e274f90ce4d09a4
+   `2013-01-29 <http://es-content.s3.amazonaws.com/Enstratius_API_2013-01-29.pdf>`_,44efcd17bee523f890f46fbb92d44576
+   `2013-03-13 <http://es-content.s3.amazonaws.com/Enstratius_API_2013-03-13.pdf>`_,7d558a39e886d6511674846225fd93bd
 
 Enstratius Agent
 ~~~~~~~~~~~~~~~~
