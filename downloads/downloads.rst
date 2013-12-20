@@ -12,7 +12,7 @@ API Documentation
    :header: "Release Date", "MD5"
    :widths: 10, 30
 
-   `2012-12-07 <http://es-content.s3.amazonaws.com/DCM_API_2013-12-07.pdf>`_,a7743a2eeae340dde6048f6e613122f6
+   `2013-12-07 <http://es-content.s3.amazonaws.com/DCM_API_2013-12-07.pdf>`_,a7743a2eeae340dde6048f6e613122f6
    `2013-03-13 <http://es-content.s3.amazonaws.com/Enstratius_API_2013-03-13.pdf>`_,7d558a39e886d6511674846225fd93bd
    `2013-01-29 <http://es-content.s3.amazonaws.com/Enstratius_API_2013-01-29.pdf>`_,44efcd17bee523f890f46fbb92d44576
    `2012-06-15 <http://es-content.s3.amazonaws.com/Enstratius_API_2012-06-15.pdf>`_,d4f79483c301e6f71e79d4b29bfa1986
