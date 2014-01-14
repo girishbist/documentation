@@ -43,4 +43,4 @@ source statFile
 checkMax $SCALED_LOAD $MAX
 checkMin $SCALED_LOAD $MIN
 
-echo $DO_SCALE
+exit $DO_SCALE
