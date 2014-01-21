@@ -14,6 +14,7 @@ Glacier Term  DCM Term
 Vault         Directory
 Archive       Archive
 Directory     Directory
+=========     =========
 
 An archive is a single unchangeable file. A directory contains archives. There is only a single layer of directories, no hierarchy (you cannot create a directory within another directory).
 
