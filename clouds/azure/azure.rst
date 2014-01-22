@@ -1,6 +1,11 @@
 .. _azure_cloud:
 
 Azure
-=====
+-----
 
-.. include:: configuration.rst
+.. toctree::
+   :maxdepth: 3
+   :hidden:
+   :titlesonly:
+
+   configuration
