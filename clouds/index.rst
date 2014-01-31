@@ -21,3 +21,4 @@
    rackspace/rackspace
    vcloud/vcloud
    zimory/zimory
+   terremark/terremark

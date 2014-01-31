@@ -48,6 +48,7 @@ provider:
    * :ref:`rackspace_cloud`  | `Rackspace Cloud Dasein Wiki <https://github.com/greese/dasein-cloud-rackspace/wiki>`_
    * :ref:`vcloud_cloud`     | `vCloud Cloud Dasein Wiki <https://github.com/greese/dasein-cloud-vcloud/wiki>`_
    * :ref:`zimory_cloud`     | `Zimory Cloud Dasein Wiki <https://github.com/greese/dasein-cloud-zimory/wiki>`_
+   * :ref:`terremark_cloud`
 
 .. toctree::
    :maxdepth: 3
