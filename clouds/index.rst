@@ -10,6 +10,7 @@
    atmos/atmos
    aws/aws
    azure/azure
+   glacier/glacier
    cloudsigma/cloudsigma
    cloudstack/cloudstack
    ibm/ibm

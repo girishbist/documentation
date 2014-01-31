@@ -1,7 +1,7 @@
-.. _aws_cloud:
+.. _glacier:
 
-AWS
-===
+Glacier
+=======
 
 .. include:: capabilities.rst
 
