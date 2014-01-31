@@ -8,21 +8,22 @@ Azure Support in DCM
 
 DCM supports the following resource types in Azure: Servers, Machine Images, Volumes, Object Store/Files and Networks. The section below identifies any non-standard behavior for these resources as managed in DCM.
 
-=============================  ==========================
-Azure Terms                    Dell Cloud Manager Terms
-=============================  ==========================
-Cloud Service/Hosted Service   Machine Image
-OS Image                       Machine Image
-Disk                           Disk
-Server                         Server
-Volume                         Volume
-Gateway                        VPN
-Network                        Network
-Object Store/Files             Storage Files
-=============================  ==========================			
+============================= ========================
+Azure Terms                   Dell Cloud Manager Terms
+============================= ========================
+Cloud Service/Hosted Service  Machine Image
+OS Image                      Machine Image
+Disk                          Disk
+Server                        Server
+Volume                        Volume
+Gateway                       VPN
+Network                       Network
+Object Store/Files            Storage Files
+============================= ========================
 
 Azure Disks
 ~~~~~~~~~~~
+
 All disks are created from a .vhd file held in the storage account for the associated subscription. A disk cannot simply be created by giving it a name and size. A medialink to the location of the BLOB must also be provided. See Windows Azure Add Disk for more information.
 
 An empty disk can be attached to a virtual machine to automatically create the data disk in the default storage account. See Windows Azure Add Data Disk. Set the HostCaching, the device the disk should be attached to, and the logical disk size. The disk size is passed in as an attribute. At the moment it is hardcoded to 1GB. 
@@ -31,6 +32,7 @@ A disk is created for each virtual machine. A disk with a configured operating s
 
 Azure OS Image
 ~~~~~~~~~~~~~~
+
 Servers must be stopped for imaging. If the server is running, DCM stops it, then captures an image.
 
 All VMs must be sysprepped before you can make an image of them Please see the following information: Windows - Capture windows image, Linux - Capture linux image
@@ -41,6 +43,7 @@ Each image also has a .vhd file held in storage. When an image is deleted, the .
 
 Azure Virtual Machine
 ~~~~~~~~~~~~~~~~~~~~~
+
 Azure has a three-level architecture, as described in this hosted `Azure service overview <http://www.windowsazure.com/en-us/documentation/articles/fundamentals-application-models/#concepts>`. The levels are:
 * Windows Azure Cloud Service (maximum of 20 cores per account, see `Usage Quotas <https://www.windowsazure.com/en-us/offers/commitment-plans#header-6>`.)
 * Deployment
@@ -53,29 +56,37 @@ When a VM is created using DCM, all three levels are given the same name, but fo
 
 General Tips for Managing Azure Servers in DCM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-*The Provider ID of a running server lists the server name three times and this name is a portion of the DNS of the server.  
-For example, the name of a test server DCMTest1 has a Provider ID of dcmtest1:dcmtest1:dcmtest1.  The DNS is then dcmtest1.cloudapp.net. 
-*You cannot create standalone volumes.
-Azure has a default restriction of 20 Cloud Services per account, such as VMs. This is based on the number of cores used. For further explanation, see Usage Quotas.
-*If launching a VM into a network, that network must have a subnet that can accept the VM.
+
+* The Provider ID of a running server lists the server name three times and this name is a portion of the DNS of the server.  
+  For example, the name of a test server DCMTest1 has a Provider ID of dcmtest1:dcmtest1:dcmtest1.  The DNS is then dcmtest1.cloudapp.net. 
+* You cannot create standalone volumes.
+
+  Azure has a default restriction of 20 Cloud Services per account, such as VMs. This is based on the number of cores used. For further explanation, see Usage Quotas.
+
+* If launching a VM into a network, that network must have a subnet that can accept the VM.
 
 Specifics for Ubuntu Servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-*When choosing a public Ubuntu Machine Image: We recommend those published by Canonical. RightScale public images have been prepared in a way that does not provide password authentication, so DCM has no way to authenticate using our public keys.  
-*For Ubuntu servers, the username is "dasein".  
-*To SSH to a linux VM the DNS name is 'name'.cloudapp.net, such as in the example above: dcmtest1.cloudapp.net.
+* When choosing a public Ubuntu Machine Image: We recommend those published by Canonical. RightScale public images have been prepared in a way that does not provide password authentication, so DCM has no way to authenticate using our public keys.  
+
+* For Ubuntu servers, the username is "dasein".  
+
+* To SSH to a linux VM the DNS name is 'name'.cloudapp.net, such as in the example above: dcmtest1.cloudapp.net.
 
 Specifics for Windows Servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-*When choosing a public Windows Machine Image: We recommend those published by Canonical or Microsoft. RightScale public images have been prepared in a way that does not provide password authentication, so DCM has no way to authenticate using our public keys.  
-*Windows takes longer to provision and therefore longer for DCM to show it as running. 
-*Azure does not support the concept of a traditional firewall, and port 3389 for RDP is not publicly open by default.  Therefore, to access a Windows server through RDP you will either need to access using the default port of 59013, or you will have to access the direct Azure console and update the public endpoint for your server to 3389.
-*For Windows servers, the username is "administrator"
+* When choosing a public Windows Machine Image: We recommend those published by Canonical or Microsoft. RightScale public images have been prepared in a way that does not provide password authentication, so DCM has no way to authenticate using our public keys.  
+
+* Windows takes longer to provision and therefore longer for DCM to show it as running. 
+
+* Azure does not support the concept of a traditional firewall, and port 3389 for RDP is not publicly open by default.  Therefore, to access a Windows server through RDP you will either need to access using the default port of 59013, or you will have to access the direct Azure console and update the public endpoint for your server to 3389.
+
+* For Windows servers, the username is "administrator"
 
 Azure Networks
 --------------
 Gateways are not currently implemented in DCM
-
+
 Provider Credentials
 --------------------
 
