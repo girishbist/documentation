@@ -108,6 +108,7 @@ X509 Credentials
 Created a self-signed certificate by whatever method seems appropriate. Here are some options:
 
 `Creating X509 Certificates (Linux) <http://www.ipsec-howto.org/x595.html>`_
+
 `Creating X509 Certificates (Windows) <http://msdn.microsoft.com/en-us/library/vstudio/bfsktky3(v=vs.100).aspx>`_
 
 Log in to your azure account at https://manage.windowsazure.com/#Workspace/All/dashboard

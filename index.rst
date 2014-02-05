@@ -36,6 +36,7 @@ provider:
 .. hlist::
    :columns: 2
 
+   * :ref:`azure_cloud` | `Azure Cloud Dasein Wiki <https://github.com/greese/dasein-cloud-azure/wiki/Azure_Compute>`_
    * :ref:`atmos_cloud` | `Atmos Cloud Dasein Wiki <https://github.com/greese/dasein-cloud-atmos/wiki>`_
    * :ref:`aws_cloud`        | `Aws Cloud Dasein Wiki <https://github.com/greese/dasein-cloud-aws/wiki>`_
    * :ref:`cloudsigma_cloud` | `Cloudsigma Cloud Dasein Wiki <https://github.com/greese/dasein-cloud-cloudsigma/wiki>`_
