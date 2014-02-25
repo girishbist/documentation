@@ -105,18 +105,29 @@ Account number - subscription id from the Azure console
 X509 Credentials
 ~~~~~~~~~~~~~~~~
 
-Created a self-signed certificate by whatever method seems appropriate. Here are some options:
+Create a self-signed certificate by whatever method seems appropriate, and upload to Azure under Settings -> Management Certificates 
 
-`Creating X509 Certificates (Linux) <http://www.ipsec-howto.org/x595.html>`_
+Recommend the following method to create the certificate and credentials
 
+(run on a Linux or Cygwin Windows)
+.. code-block:: bash
+
+    openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout myPrivateKey.tmp -out myCert.pem
+    openssl rsa -in myPrivateKey.tmp -check -out myPrivateKey.key  
+    chmod 600 myPrivateKey.key
+
+    ## Upload this .cer to Azure 
+    openssl  x509 -outform der -in myCert.pem -out myCert.cer
+ 
+    # Setups DCM
+    Account #: Azure subscription ID
+    Cert: cat myCert.pem  ## Include BEGIN and END
+    Priv: cat myPrivateKey.key  ## Include BEGIN and END
+    
 `Creating X509 Certificates (Windows) <http://msdn.microsoft.com/en-us/library/vstudio/bfsktky3(v=vs.100).aspx>`_
 
-Log in to your azure account at https://manage.windowsazure.com/#Workspace/All/dashboard
-
-Go to Settings > Management Certificates and upload your certificate.
-
 Now that your certificate has been linked to your account we need to set up the
-account in Enstratius.  First of all we need to export the certificate and key
+account in Enstratius/DCM.  First of all we need to export the certificate and key
 so that we can get the plain text contents.
 
 Export the certificate file as .pem file.
@@ -135,13 +146,11 @@ Example:
 
 Open the .pem file that has been created and copy and paste the private key section to a new .pem file.
 
-Within the Enstratius console you can then add your account credentials.
 
-We had to hack the account in as it seems the existing console code is not
-happy to just have x509 cert and key parameters and falls over when trying to
-get the apiSecretKey (as it is null).  So Andy hardcoded a secretkey parameter
-into a new jar file which I then used in order to link my Enstratius login to
-the new azure cloud account.
+Log in to your azure account at https://manage.windowsazure.com/#Workspace/All/dashboard
 
-X509 Certificate - open the certificate.pem file within TextEdit and copy+paste the contents into the text box.
-X509 Key - open the key.pem file within TextEdit and copy+paste the contents into the text box.
+Go to Settings > Management Certificates and upload your certificate.
+
+Within the DCM/Enstratius console you can then add your account credentials.
+
+
